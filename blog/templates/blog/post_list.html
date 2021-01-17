@@ -1,22 +1,72 @@
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>6110110184's 3SB04</title>
+        <style>
+            .bg{
+                background-color: aqua;
+                display: list-item;
+                text-align: center;
+            }
+            .div3{
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            .div2{
+                text-align: center;
+                justify-content: center;
+                background-color: blue;
+                display: flex;
+                border: 5px solid aqua;
+                color: #fff;
+            }
+            div{
+                text-align: center;
+                justify-content: center;
+                display: contents;
+            }
+            p{
+                font-size: x-small;
+            }
+            .p1{
+                font-size: x-large;
+            }
+            .post_title{
+                background-color: skyblue;
+                border: 5px solid aqua;
+            }
+            h2{
+                font-size: 40px;
+            }
+            .ending{
+                background-color: black;
+                display: flex;
+                height: 5px;
+                margin-top: 5%;
+            }
+            h1{
+                font-size: 60px;
+                text-shadow: 5px 5px #000000;
+            }
+        </style>
     </head>
     <body>
         <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+            <div class="div2">
+                <h1>61110110184's Django Blog</a></h1>
+            </div>
+            
+            <div>
+            {% for post in posts %}
+                <div>
+                    <h2 class="post_title">{{ post.title }}</a></h2>
+                    <p class="p1">{{ post.text|linebreaksbr }}</p>
+                    <p>published: {{ post.published_date }}</p>
+                </div>
+            {% endfor %}
+            </div>
         </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
-    </body>
+        <div class="ending"> </div>
+    </body>    
 </html>
